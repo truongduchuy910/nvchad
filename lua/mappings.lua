@@ -12,7 +12,7 @@ set({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 
 set({ "n", "x", "o" }, "s", "<Plug>(leap)")
 
-set("n", "<leader>fn", "<cmd>ObsidianSearch<CR>", { desc = "telescope Obsidian" })
+-- set("n", "<leader>fn", "<cmd>ObsidianSearch<CR>", { desc = "telescope Obsidian" })
 
 -- set("i", "<C-CR>", 'copilot#Accept("\\<CR>")', {
 --   expr = true,
@@ -21,4 +21,4 @@ set("n", "<leader>fn", "<cmd>ObsidianSearch<CR>", { desc = "telescope Obsidian" 
 -- set("i", "∆", "<Plug>(copilot-next)")
 -- set("i", "˚", "<Plug>(copilot-previous)")
 
-vim.g.copilot_no_tab_map = true
+-- vim.g.copilot_no_tab_map = true
