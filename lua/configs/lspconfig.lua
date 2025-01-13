@@ -4,7 +4,19 @@ require("nvchad.configs.lspconfig").defaults()
 local lspconfig = require "lspconfig"
 
 -- EXAMPLE
-local servers = { "html", "cssls" }
+local servers = {
+  "html",
+  "cssls",
+  -- "docker_compose_language_service",
+  "dockerls",
+  "lua_ls",
+  "ts_ls",
+  -- "denols",
+  "pyright",
+  "rust_analyzer",
+  -- "markdown_oxide",
+  "graphql",
+}
 local nvlsp = require "nvchad.configs.lspconfig"
 
 -- lsps with default config
@@ -22,7 +34,6 @@ end
 --   on_init = nvlsp.on_init,
 --   capabilities = nvlsp.capabilities,
 -- }
-
 
 -- -- load defaults i.e lua_lsp
 -- require("nvchad.configs.lspconfig").defaults()
@@ -46,19 +57,6 @@ end
 -- table.insert(servers, "pyright")
 --
 -- -- local lspconfig = require "lspconfig"
--- -- local servers = {
--- --   "docker_compose_language_service",
--- --   "dockerls",
--- --   "lua_ls",
--- --   "tsserver",
--- --   "denols",
--- --
--- --   "nginx_language_server",
--- --   "pyright",
--- --   "rust_analyzer",
--- --   "markdown_oxide",
--- --   "graphql",
--- -- }
 --
 -- -- local lspconfig = require "lspconfig"
 -- -- local servers = {

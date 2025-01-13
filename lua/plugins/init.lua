@@ -9,6 +9,33 @@ return {
       require "configs.lspconfig"
     end,
   },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        -- https://github.com/nvim-treesitter/nvim-treesitter?tab=readme-ov-file#supported-languages
+        "javascript",
+        "typescript",
+        "graphql",
+        "markdown_inline",
+        "nginx",
+        "tsx",
+        "yaml",
+        "groovy",
+      },
+    },
+  },
+
+  {
+    "ggandor/leap.nvim",
+    lazy = false,
+    config = function(_, opts)
+      local leap = require "leap"
+      for k, v in pairs(opts) do
+        leap.opts[k] = v
+      end
+    end,
+  },
 }
 
 -- return {
@@ -122,34 +149,4 @@ return {
 --     opts = {},
 --   },
 --
---   {
---     "nvim-treesitter/nvim-treesitter",
---     opts = {
---       ensure_installed = {
---         -- https://github.com/nvim-treesitter/nvim-treesitter?tab=readme-ov-file#supported-languages
---         "javascript",
---         "typescript",
---         -- "bash",
---         -- "graphql",
---         -- "lua",
---         -- "markdown_inline",
---         -- "nginx",
---         -- "tsx",
---         -- "xml",
---         "yaml",
---         -- "groovy",
---       },
---     },
---   },
---
---   {
---     "ggandor/leap.nvim",
---     lazy = false,
---     config = function(_, opts)
---       local leap = require "leap"
---       for k, v in pairs(opts) do
---         leap.opts[k] = v
---       end
---     end,
---   },
 -- }
