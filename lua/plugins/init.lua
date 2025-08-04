@@ -1,3 +1,9 @@
+if vim.g.neovide then
+  -- Put anything you want to happen only in Neovide here
+  vim.g.neovide_opacity = 0.8
+  vim.g.neovide_normal_opacity = 0.8
+end
+
 return {
   {
     "stevearc/conform.nvim",
@@ -36,8 +42,26 @@ return {
       end
     end,
   },
+  {
+    "kndndrj/nvim-dbee",
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+    },
+    build = function()
+      -- Install tries to automatically detect the install method.
+      -- if it fails, try calling it with one of these parameters:
+      --    "curl", "wget", "bitsadmin", "go"
+      require("dbee").install()
+    end,
+    config = function()
+      require("dbee").setup(--[[optional config]])
+    end,
+  },
+  {
+    "github/copilot.vim",
+    lazy = false,
+  }
 }
-
 -- return {
 --   {
 --     "yetone/avante.nvim",
@@ -97,10 +121,6 @@ return {
 --     },
 --   },
 --
---   -- {
---   --   "github/copilot.vim",
---   --   lazy = false,
---   -- },
 --
 --   {
 --     "lewis6991/gitsigns.nvim",

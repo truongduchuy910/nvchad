@@ -12,13 +12,15 @@ set({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 
 set({ "n", "x", "o" }, "s", "<Plug>(leap)")
 
+-- set("n", "<leader>q", "<cmd>lua require('dbee').toggle()<CR>", { desc = "telescope Obsidian" })
+
 -- set("n", "<leader>fn", "<cmd>ObsidianSearch<CR>", { desc = "telescope Obsidian" })
 
--- set("i", "<C-CR>", 'copilot#Accept("\\<CR>")', {
+-- set("i", "<leader><leader>", 'copilot#Accept("\\<CR>")', {
 --   expr = true,
 --   replace_keycodes = false,
 -- })
 -- set("i", "∆", "<Plug>(copilot-next)")
 -- set("i", "˚", "<Plug>(copilot-previous)")
 
--- vim.g.copilot_no_tab_map = true
+vim.g.copilot_no_tab_map = true

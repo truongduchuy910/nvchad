@@ -16,7 +16,9 @@ local servers = {
   "rust_analyzer",
   -- "markdown_oxide",
   "graphql",
+  "nginx_language_server"
 }
+
 local nvlsp = require "nvchad.configs.lspconfig"
 
 -- lsps with default config
