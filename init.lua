@@ -35,3 +35,8 @@ require "nvchad.autocmds"
 vim.schedule(function()
   require "mappings"
 end)
+
+if vim.g.neovide then
+  -- Put anything you want to happen only in Neovide here
+  vim.o.guifont = "Hack Nerd Font:h11" -- text below applies for VimScript
+end

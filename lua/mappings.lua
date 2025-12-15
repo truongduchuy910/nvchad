@@ -23,4 +23,12 @@ set({ "n", "x", "o" }, "s", "<Plug>(leap)")
 -- set("i", "∆", "<Plug>(copilot-next)")
 -- set("i", "˚", "<Plug>(copilot-previous)")
 
+set("i", "<Right>", 'copilot#Accept("<CR>")', {
+  expr = true,
+  silent = true,
+  noremap = true,
+  replace_keycodes = false,
+  desc = "Copilot Accept (Right Arrow)"
+})
+
 vim.g.copilot_no_tab_map = true
